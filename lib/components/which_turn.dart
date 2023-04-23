@@ -25,7 +25,7 @@ class WhichTurn extends StatelessWidget {
                 color: Colors.grey,
               ),
         const SizedBox(
-          width: 18.0,
+          width: 15.0,
         ),
         const Text(
           "It's your turn now!",

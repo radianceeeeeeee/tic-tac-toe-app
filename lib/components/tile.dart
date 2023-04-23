@@ -54,7 +54,7 @@ class _TileState extends State<Tile> {
       },
       child: Container(
           decoration: BoxDecoration(
-            border: Border.all(color: Colors.black, width: 2.0),
+            border: Border.all(color: Colors.grey, width: 2.0),
           ),
           child: LayoutBuilder(builder: (context, constraints) {
             if (tiles.tileStates[widget.index] == TileState.empty) {
@@ -62,16 +62,24 @@ class _TileState extends State<Tile> {
             }
 
             if (tiles.tileStates[widget.index] == TileState.circle) {
-              return const Icon(
-                Icons.circle_outlined,
-                size: 108,
-                color: Colors.blue,
+              return LayoutBuilder(
+                builder: (BuildContext context, BoxConstraints constraints) {
+                  return Icon(
+                    Icons.circle_outlined,
+                    size: constraints.minWidth * 0.75,
+                    color: Colors.blue,
+                  );
+                },
               );
             } else {
-              return const Icon(
-                Icons.close,
-                size: 108,
-                color: Colors.red,
+              return LayoutBuilder(
+                builder: (BuildContext context, BoxConstraints constraints) {
+                  return Icon(
+                    Icons.close,
+                    size: constraints.minWidth * 0.75,
+                    color: Colors.red,
+                  );
+                },
               );
             }
           })),
