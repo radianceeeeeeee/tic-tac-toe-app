@@ -29,7 +29,8 @@ class WhichTurn extends StatelessWidget {
         ),
         const Text(
           "It's your turn now!",
-          style: TextStyle(fontSize: 24.0, color: Colors.grey),
+          style: TextStyle(
+              fontSize: 24.0, color: Colors.grey, fontFamily: 'Quicksand'),
         ),
       ],
     );

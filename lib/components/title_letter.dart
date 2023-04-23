@@ -10,17 +10,21 @@ class TitleTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Text(
-          letter,
-          style: const TextStyle(
-            fontSize: 72,
-            color: Colors.grey,
-            fontFamily: 'Quicksand',
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        return Scaffold(
+          body: Center(
+            child: Text(
+              letter,
+              style: TextStyle(
+                fontSize: constraints.maxHeight * 0.75,
+                color: Colors.grey,
+                fontFamily: 'Quicksand',
+              ),
+            ),
           ),
-        ),
-      ),
+        );
+      },
     );
   }
 }

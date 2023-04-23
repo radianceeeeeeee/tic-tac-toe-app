@@ -11,13 +11,17 @@ class Game extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: const Color.fromRGBO(0, 0, 0, 0),
+        elevation: 0.0,
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back),
+          icon: const Icon(
+            Icons.arrow_back,
+            color: Colors.grey,
+          ),
           onPressed: () {
             Navigator.pop(context);
           },
         ),
-        title: const Text("Tic Tac Toe"),
       ),
       body: Column(
         children: const <Widget>[
